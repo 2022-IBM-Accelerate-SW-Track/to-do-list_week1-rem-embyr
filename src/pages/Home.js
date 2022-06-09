@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AddTodo from "./AddTodo.js";
-import todos from "../todos.js";
+import AddTodo from "../component/AddTodo.js";
+import Todos from "../component/todos.js";
 import "./Home.css";
   
 class Home extends Component {
@@ -31,7 +31,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Todo's </h1>
-        <p><Todos todos={this.todos} /><AddTodo addTodo={this.addTodo()} /></p>
+        <p><Todos todos={this.state.todos} /><AddTodo addTodo={this.addTodo} /></p>
       </div>
     );
   }
